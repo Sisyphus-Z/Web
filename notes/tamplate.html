@@ -25,18 +25,17 @@
 <!-- 将另一个网页作为背景，同时body的margin，padding都要设置为0px -->
 <iframe src="background.html" frameborder="0" width="100%" height="100%" style="z-index:-1;width:100%;position:fixed;"></iframe>
     
-
-
+<!-- div，span没有语义，都是用来布局的 -->
+<!-- 默认的div，一个就会占一行 -->
 <div class="c1" id="xxx"  >这是div .c1</div>
 <div class="c2">这是div .c2</div>
 <div id="i1"  >这是div #i1</div>
-<p>这是一个段落</p>
 
-
+<!-- 默认的span，多个会共用用一行 -->
 <span>这是一个行内元素</span>
 <span style="display:block">通过display：block将行内元素改为块元素，并且通过行内样式的方式设置样式，而不是内嵌样式</span>
 
-
+<p>这是一个段落。<br/>换行了</p>
 
 <!--绑定函数-->
 <input onclick="myAlert()" type="button" value="点击我，弹出警告框" />
