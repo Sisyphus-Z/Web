@@ -24,19 +24,58 @@
 
 <!-- 将另一个网页作为背景，同时body的margin，padding都要设置为0px -->
 <iframe src="background.html" frameborder="0" width="100%" height="100%" style="z-index:-1;width:100%;position:fixed;"></iframe>
-    
+
+<br/>---------------------------------------------------------------基础标签<br/>
 <!-- div，span没有语义，都是用来布局的 -->
 <!-- 默认的div，一个就会占一行 -->
 <div class="c1" id="xxx"  >这是div .c1</div>
 <div class="c2">这是div .c2</div>
 <div id="i1"  >这是div #i1</div>
-
 <!-- 默认的span，多个会共用用一行 -->
 <span>这是一个行内元素</span>
 <span style="display:block">通过display：block将行内元素改为块元素，并且通过行内样式的方式设置样式，而不是内嵌样式</span>
 
 <p>这是一个段落。<br/>换行了</p>
 
+<!-- target="_self" -->
+<a href="http://www.baidu.com" target="_blank">打开百度</a>
+<!-- 有些链接比如xxx.png是看，比如xxx.zip是下载 -->
+<a href="background.html" target="_blank">打开background.html</a>
+<!-- 锚点链接 -->
+<a href="#xxxid">跳转到此页面id值为xxxid的地方(页面上还没有xxxid)</a>
+
+<br/>---------------------------------------------------------------表格<br/>
+略
+
+<br/>---------------------------------------------------------------列表<br/>
+<!-- 无序列表 -->
+<ul>
+    <li>列表项1</li>
+    <li>列表项2</li>    
+</ul>
+<!-- 有序列表 -->
+<ol>
+    <li>列表项1</li>
+    <li>列表项2</li>    
+</ol>
+<!-- 自定义列表 -->
+<dl>
+    <dt>名词1</dt>
+    <dd>解释1</dd>
+    <dd>解释2</dd>    
+</dl>
+
+<br/>---------------------------------------------------------------表单<br/>
+<!-- 传数据是name的值:value的值 -->
+<form action="background.html" method="get">
+    姓名<input type="text" name="username" value="aaa"><br/>
+    <label for="username1id">姓名</label><input type="text" name="username1" value="aaa" id="username1id"><br/>
+    性别 男<input type="radio" name="sex" value="male"> 女<input type="radio" name="sex" value="female"><br/>
+
+    <input type="submit" value="提交">
+</form>
+
+<br/>---------------------------------------------------------------按钮绑定函数<br/>
 <!--绑定函数-->
 <input onclick="myAlert()" type="button" value="点击我，弹出警告框" />
 <script type="text/javascript">
@@ -60,6 +99,7 @@
 <!--<script></script>既可以实现内嵌 JS 代码，也可以实现引入外部的 JS 文件，但是只能二选一。-->
 <script type="text/javascript" src="template.js"></script>
 
+<br/>---------------------------------------------------------------js的dom操作<br/>
 <!--js的dom操作-->
 <script>
 var p1 = document.getElementsByClassName("c1")[0];
