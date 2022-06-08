@@ -45,3 +45,14 @@ window.localStorage.getItem('dashop_token'))
 void function(){
 	document.write('ni hao');
 }()
+
+
+
+
+
+------------------------------------------------------------
+局部变量变全局
+function aaa() {
+    var dp = 123;
+    window.dp=dp;
+}
